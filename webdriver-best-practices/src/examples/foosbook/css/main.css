@@ -5,15 +5,25 @@ body {
   overflow-x: hidden;
 }
 
-.menu {
+.header-wrapper {
   background: #3B5998;
   margin: 0;
   padding: 20px 20px 10px 20px;
   width: 100%;
 }
 
+.header {
+  margin: auto;
+  width: 1000px;
+}
+
 hr {
   color: #9AAFCA;
+}
+
+.registration {
+  width: 1000px;
+  margin: auto;
 }
 
 .content {  

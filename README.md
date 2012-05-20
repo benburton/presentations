@@ -15,5 +15,6 @@ These are presentations I've given in the past.
 These are presentations that I'll be giving in the future:
 
   * Selenium WebDriver Best Practices - [slides](http://benburton.github.com/presentations/webdriver-best-practices) [source](https://github.com/benburton/presentations/tree/master/webdriver-best-practices/src)
-
+      * 05/31/2012 - [NYC Metro Selenium Users Meetup](http://www.meetup.com/NYCSelenium/events/65086552/)
+      * 06/09/2012 - [Pittsburgh TechFest 2012](http://pghtechfest.com/Sessions.html)
 

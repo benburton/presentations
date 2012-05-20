@@ -6,17 +6,16 @@
     
     <meta name="description" content="Pittsburgh TechFest 2012 talk on Selenium WebDriver best practices">
     <meta name="author" content="Ben Burton">
-    
-    
     <link rel="stylesheet" type="text/css" href="css/main.css" />
   </head>
   <body>
-    <section>
+    <div id="impress">
+    <section class="step" data-x="0" data-y="0">
       <h1 class="talk-title">Selenium WebDriver Best Practices</h1>
       <h3>Ben Burton</h2>
       <h3>@bjburton</h2>
     </section>
-    <section class="text">
+    <section class="text step" data-x="1200" data-y="0">
       <h2>Functional tests are <em>really</em> expensive!</h2>
       <div class="notes">
           <ul>
@@ -26,8 +25,11 @@
           </ul>
       </div>
     </section>
-    <section class="text">
+    <section class="text step" data-x="2400" data-y="0">
       <h2>Page Object Pattern</h2>
     </section>
+    </div>
+    <script type="text/javascript" src="js/impress.js"></script>
+    <script>impress().init();</script>
   </body>
 </html>

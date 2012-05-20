@@ -57,3 +57,7 @@ h3 {
   text-align: center;
   font-weight: normal;
 }
+
+.notes {
+  display: none;
+}

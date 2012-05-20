@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Welcome to Foosbook - Social Networking for Foosball Enthusiasts</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+    <script type="text/javascript" src="js/jquery.1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/signup.js"></script>
+  </head>
+  <body>
+    <div class="menu">
+      <img src="images/foosbook-logo.png" />
+    </div>
+    <div class="content">
+      
+      <div id="timeline">
+        <h1>Your Foosbook Timeline</h1>
+        <h2>Tell your foosball story with a new kind of profile. <a href="#">Learn more.</a></h2>
+        <div class="movie-wrapper">
+          <div class="movie">
+            <img src="images/play.png">
+          </div>
+        </div>
+      </div>
+    
+      <form id="signup">
+        <h2>Sign Up</h2>
+        <p>It's free and always will be.</p>
+        <hr />
+        <table>
+          <tr>
+            <td><label for="first-name">First Name:</label></td>
+            <td><input type="text" name="first-name" /></td>
+          </tr>
+          <tr>
+            <td><label for="last-name">Last Name:</label></td>
+            <td><input type="text" name="last-name" /></td>
+          </tr>
+          <tr>
+            <td><label for="email">Your Email:</label></td>
+            <td><input type="text" name="email" /></td>
+          </tr>
+          <tr>
+            <td><label for="email-confirm">Re-enter Email:</label></td>
+            <td><input type="text" name="email-confirm" /></td>
+          </tr>
+          <tr>
+            <td><label for="password">New Password:</label></td>
+            <td><input type="password" name="password" /></td>
+          </tr>
+          <tr class="submit">
+            <td></td>
+            <td><input type="submit" value=""/></td>
+          </tr>
+        </table>
+        <div id="error-message"></div>
+      </div>
+    </body>
+</html>

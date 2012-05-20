@@ -1,0 +1,116 @@
+body {
+  color: #0E385F;
+  font-family: "lucida grande",tahoma,verdana,arial,sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.menu {
+  background: #3B5998;
+  margin: 0;
+  padding: 20px 20px 10px 20px;
+  width: 100%;
+}
+
+hr {
+  color: #9AAFCA;
+}
+
+.content {  
+  background-color: #FFFFFF;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#C8CFE3)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, #FFFFFF, #C8CFE3); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, #FFFFFF, #C8CFE3); /* FF3.6+ */
+  background-image:     -ms-linear-gradient(top, #FFFFFF, #C8CFE3); /* IE10 */
+  background-image:      -o-linear-gradient(top, #FFFFFF, #C8CFE3); /* Opera 11.10+ */
+  background-image:         linear-gradient(to bottom, #FFFFFF, #C8CFE3);
+  height: 560px;
+  width: 100%;
+}
+
+#timeline {
+  float: left;
+  color: #333333;
+  margin-left: 50px;
+  padding-top: 15px;
+  text-align: center;
+}
+
+#timeline h1 {
+  margin: 15px 0;
+}
+
+#timeline h2 {
+  color: #999999;
+  font-size: 16px;
+  margin: 10px 0 20px;
+}
+
+#timeline a {
+  color: #3B5998;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#timeline .movie-wrapper {
+  border: 1px solid #CCCCCC;
+  margin: auto;
+  width: 450px;
+}
+
+#timeline .movie {
+  background: url("../images/foosball-table.png") no-repeat;
+  width: 430px;
+  height: 240px;
+  position: relative;
+  border: 10px solid #FFFFFF;
+}
+
+#timeline .movie img {
+  position: absolute;
+  top: 89px;
+  left: 169px;
+  cursor: pointer;
+}
+
+#signup {
+  float: right;
+  margin-right: 50px;
+  padding-top: 25px;
+  width: 300px;
+}
+
+#signup h2 {
+  font-size: 18px;
+}
+
+#signup p {
+  color: #0E385F;
+      font-size: 15px;
+}
+
+#signup td {
+  font-size: 13px;
+  text-align: right;
+}
+
+#signup input[type='submit'] {
+  background: url("../images/submit-button.png");
+  cursor: pointer;
+  width: 116px;
+  height: 30px;
+  margin-top: 10px;
+  float: left;
+  border: none;
+}
+
+#error-message {
+  font-size: 11px;
+  color: #333333;
+  text-align: center;
+  background: #FFEBE8;
+  padding: 7px 3px;
+  border: 1px solid #DD3C10;
+  margin-top: 10px;
+  display: none;
+}

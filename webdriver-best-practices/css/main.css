@@ -1,0 +1,59 @@
+@font-face {
+  font-family: YanoneKaffeesatz;
+  src: url('../fonts/YanoneKaffeesatzTTF/YanoneKaffeesatz-Regular.ttf');
+}
+
+@font-face {
+  font-family: YanoneKaffeesatz;
+  src: url('../fonts/YanoneKaffeesatzTTF/YanoneKaffeesatz-Bold.ttf');
+  font-weight: bold;
+}
+
+body {
+  background: #4F526D;
+  font-family: YanoneKaffeesatz;
+  color: #C5C6D1;
+  vertical-align: middle;
+}
+
+section {
+  width: 1024px;
+  height: 768px;
+  margin: 50px auto;
+  border: 10px dashed #C5C6D1;
+}
+
+h1 {
+  font-size: 140px;
+  text-shadow: 4px 4px #9397B9;
+  width: 1000px;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+}
+
+h1.talk-title {
+  padding: 70px 0;
+}
+
+h2 {
+  font-size: 190px;
+  margin-top: 90px;
+  text-align: center;
+  line-height: 180px;
+}
+
+section.text h2 em {
+  font-style: normal;
+  text-decoration: underline;
+  color: #F9F0A5;
+}
+
+h3 {
+  font-size: 80px;
+  color: #F9F0A5;
+  margin: auto;
+  width: 600px;
+  text-align: center;
+  font-weight: normal;
+}

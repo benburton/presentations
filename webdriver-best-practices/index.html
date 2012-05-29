@@ -10,25 +10,25 @@
   </head>
   <body>
     <div id="impress">
-    <section class="step" data-x="0" data-y="0">
-      <h1 class="talk-title">Selenium WebDriver Best Practices</h1>
-      <h3>Ben Burton</h2>
-      <h3>@bjburton</h2>
-    </section>
-    <section class="text step" data-x="1200" data-y="0">
-      <h2>Functional tests are <em>really</em> expensive!</h2>
-      <div class="notes">
-          <ul>
-              <li>They're slow!</li>
-              <li>They're flakey by default</li>
-              <li>Potentially many browsers to support</li>
-              <li>Trivial page structure changes influence test success</li>
-          </ul>
-      </div>
-    </section>
-    <section class="text step" data-x="2400" data-y="0">
-      <h2>Page Object Pattern</h2>
-    </section>
+      <section class="step" data-y="0" data-z="200" data-scale="350">
+        <h1 class="talk-title">Selenium WebDriver Best Practices</h1>
+        <h3>Ben Burton</h2>
+        <h3>@bjburton</h2>
+      </section>
+      <section class="text step" data-x="0" data-y="0">
+        <h2>Functional tests are <em>really</em> expensive!</h2>
+      </section>
+      <section class="step" data-x="1200" data-y="0" data-rotate="90">
+        <ul>
+          <li>They're slow!</li>
+          <li>They're flakey!</li>
+          <li>Potentially many browsers to support</li>
+          <li>Trivial page structure changes influence test success</li>
+          <li>AJAX requests introduce ambiguity</li>
+        </ul>
+      </section>
+      <section="overview" class="step" data-x="3000" data-y="1500" data-scale="10" data-rotate="1080">
+      </section>
     </div>
     <script type="text/javascript" src="js/impress.js"></script>
     <script>impress().init();</script>

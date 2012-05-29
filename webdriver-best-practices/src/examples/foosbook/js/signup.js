@@ -84,7 +84,6 @@ String.prototype.format = function() {
         hideErrors();
         for (var property in $formFields) {
           if ($formFields.hasOwnProperty(property) && $formFields[property] !== 'validate') {
-            console.log(property);
             if (!this[property].validate()) {
               return false;
             }
@@ -94,9 +93,9 @@ String.prototype.format = function() {
       }
     };
     
-    $("form").submit(function() {
-      console.log($formFields.validate());
-      return false;
+    $("form").submit(function(event) {
+      event.preventDefault();
+      return $formFields.validate();
     });
   });
   

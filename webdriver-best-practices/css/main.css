@@ -14,6 +14,11 @@ body {
   font-family: YanoneKaffeesatz;
   color: #C5C6D1;
   vertical-align: middle;
+  font-size: 190px;
+  margin-top: 50px;
+  text-align: center;
+  line-height: 180px;
+  font-weight: bold;
 }
 
 section {
@@ -35,14 +40,7 @@ h1.talk-title {
   padding: 45px 0;
 }
 
-h2 {
-  font-size: 190px;
-  margin-top: 50px;
-  text-align: center;
-  line-height: 180px;
-}
-
-section.text h2 em {
+section.text em {
   font-style: normal;
   text-decoration: underline;
   color: #F9F0A5;
@@ -55,6 +53,7 @@ h3 {
   width: 600px;
   text-align: center;
   font-weight: normal;
+  line-height: 80px;
 }
 
 .notes {

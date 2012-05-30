@@ -40,9 +40,12 @@ h1.talk-title {
   padding: 45px 0;
 }
 
-section.text em {
+section.text {
+  padding-top: 250px;
+}
+
+section em {
   font-style: normal;
-  text-decoration: underline;
   color: #F9F0A5;
 }
 
@@ -56,6 +59,79 @@ h3 {
   line-height: 80px;
 }
 
+ul {
+  padding-top: 70px;
+  margin: 0;
+  list-style-type: none;
+}
+
+code {
+  display: block;
+  font-size: 120px;
+}
+
+code.pass {
+  color: #86ff86;
+}
+
+code.fail {
+  color: #ff8686;
+}
+
 .notes {
   display: none;
+}
+
+.img-wrapper {
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.turtle {
+  height: 500px;
+  text-align: center;
+}
+
+.img-wrapper ol {
+  position: absolute;
+}
+
+.img-wrapper li.bad {
+  color: #ff8686;
+}
+
+.img-wrapper li.good {
+  color: #86ea86;
+}
+
+.img-wrapper li {
+  position: absolute;
+  font-size: 50px;
+}
+
+.img-wrapper.foosbook li:first-child {
+  top: 125px;
+  left: 357px;
+}
+
+.img-wrapper.foosbook li:nth-child(2) {
+  top: 0;
+  left: 700px;
+}
+
+code.bdd {
+  padding: 20px;
+  font-size: 50px;
+  line-height: 50px;
+  text-align: left;
+}
+
+code.bdd span {
+  color: #86ff86;
+}
+
+.overview {
+  padding-top: 400px;
+  font-size: 300px;
 }

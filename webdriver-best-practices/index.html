@@ -10,13 +10,178 @@
   </head>
   <body>
     <div id="impress">
-      <section class="step" data-y="0" data-z="200" data-scale="350">
+      <section class="step" data-z="2" data-x="-3000">
         <h1 class="talk-title">Selenium WebDriver Best Practices</h1>
         <h3>Ben Burton</h3>
         <h3>@bjburton</h3>
       </section>
+      
       <section class="step text">
+        What is WebDriver?
+      
+        <div class="notes">
+          WebDriver is part of Selenium 2 that allows for native API interaction with a variety of different browsers.
+        </div>
+      </section>
+      
+      <section class="step" data-x="1200">
+        <img src="images/testing-pyramid.png" />
         
+        <div class="notes">
+          Mike Cohn's Testing Pyramid <cite>Succeeding with Agile: Software Development Using Scrum, Mike Cohn, Addison-Wesley Professional, 2009</cite> 
+          suggests that you should have a large, strong basis of unit tests, a number of service level integration tests, and a small number of UI tests.
+          I call these "functional" tests in the context of a web application, because they test a site's overall functionality.
+        </div>
+      </section>
+      
+      <section class="step text" data-x="2400">
+        Why so <em>few</em> functional tests?
+      </section>
+      
+      <section class="step" data-x="0" data-y="1200">
+        They're <em>brittle.</em>
+        <ul>
+          <!-- TODO: How the heck do you escape code in HTML5? Do you still need to use escaped characters? -->
+          <li><code class="pass">#sign-out</code></li>
+          <li><code class="fail">#log-out</code></li>
+        </ul>
+        
+        <div class="notes">
+          The primary example that comes to mind for me that exemplifies functional tests brittleness is that they're easily broken by minor changes in
+          document structure. Because WebDriver uses XPaths, CSS selectors, and page identifiers to locate elements on a page, changes to these attributes
+          in the document can affect whether the page elements can be successfully found and subsequently interacted with in a test. In the example above,
+          we can imagine that a seemingly innocuous change of a link id from "sign-out" to "log-out" could cause a test to fail if it's dependent on using
+          this document locator. 
+        </div>
+      </section>
+      
+      <section class="step" data-x="1200" data-y="1200">
+        They're <em>slow.</em>
+        <div class="img-wrapper"><img src="images/turtle.png" class="turtle" /></div>
+        
+        <div class="notes">
+          WebDriver tests emulate user behavior by simulating human interactions with a webpage. Because these interactions aren't instantaneous, and often
+          rely on things like AJAX responses, artificial delays, or page animations for user experience, functional tests can take a substantially longer
+          amount of time than those at other tiers in the testing pyramid. 
+        </div>
+      </section>
+      <section class="step text" data-x="2400" data-y="1200">
+        They're (often) <em>redundant.</em>
+      
+        <div class="notes">
+          If you're testing your code responsibly, you should already cover many aspects of functionality at lower levels of the testing pyramid. 
+          This means that you probably already cover a large portion of the code that gets executed in the high level functional tests. There's
+          little need to want to retest the same stuff functionally at a high level, especially because of the other setbacks.
+        </div>
+      </section>
+      
+      <section class="step text" data-x="0" data-y="2400">
+        These sound <em>AWFUL!</em>
+        
+        <div class="notes">
+          They're not all bad! Functional tests are beneficial because they provide early indications of something wrong with your overall application
+          that may not be evident at other levels of testing. For example, you might encounter an error that only occurs with specific versions of browsers.
+          Such a bug may be undetectable at the level of integration tests, so having a high-level functional test can allow you to test a wider variety of
+          use cases that you may previously have only been able to reproduce via manual testing.
+        </div>
+      </section>
+      
+      <section class="step text" data-x="1200" data-y="2400">
+        When <em>should</em> I use them?
+        
+        <div class="notes">
+          I'd recommend that you only want to use functional tests when you want to make sure that something mission critical works.
+        </div>
+      </section>
+      
+      <section class="step" data-x="2400" data-y="2400">
+        <div class="img-wrapper foosbook">
+          <ol>
+            <li class="bad"></li>
+            <li class="good"></li>
+          </ol>
+          <img src="images/foosbook.png" /></div>
+        
+        <div class="notes">
+          Let's say you're planning on testing your social networking site for foosball enthusiasts. If you're not discerning in your functional testing, you
+          might consider writing tests for both item 1 (a video pop-up) and item 2 a signup form. It seems obvious that you'd want to test the sign up form.
+          After all, if users can't sign up for your service that's a pretty big issue. If this is the case, you'll want to be aware of it immediately.
+          Functional tests are your first line of defense for difficult to detect errors that shouldn't make it past your staging environment. On the other
+          hand, what about the promotional video? It's definitely a bad user experience if the video doesn't work correctly, but taking the time to test all
+          these sorts of issues means that you might spend a great deal of time wading through false positives due to timing and document structure issues, and
+          miss or neglect issues that are much more severe (such as problems with the signup module).
+        </div>
+      </section>
+      
+      <section class="step text" data-x="0" data-y="3600">
+        Show me an <em>example!</em>
+        
+        <div class="notes">
+          Shift focus to walking through the code of Foosebook demo test (found <a href="https://github.com/benburton/presentations/tree/master/webdriver-best-practices/src/java/pageobject-example">here</a>).
+        </div>
+      </section>
+      
+      <section class="step" data-x="1200" data-y="3600">
+        <em>Page Object</em>
+          <div style="padding-top: 80px">
+          <img src="images/page-html.png" />
+          <img src="images/page-uml.png" />
+          </div>
+          
+          
+        <div class="notes">
+          The Page Object design pattern models the elements of a page as an object. It takes the structure of the HTML page in the image on the left, and
+          transforms it into an object represented by the UML diagram on the right. If the structure of the document changes, you only need to update
+          your references in one place. It also keeps the details of a page encapsulated so that they don't leak into the context of the test. In the example
+          code you'll note that the test class contained both specific details about the page that was being tested, as well as the details about *how* the
+          page was to be tested. In order to separate these concerns, we employ the page object pattern.
+          
+          Here I'll do a bunch of code refactoring in Eclipse.
+        </div>
+      </section>
+      
+      <section class="step" data-x="2400" data-y="3600">
+          Behavior Driven Design
+      </section>
+      
+      <section class="step" data-x="3600" data-y="3600">
+          <code class="bdd"><pre>
+<span>Feature:</span> Foosbook Signup
+<span>Scenario:</span> A complete signup should
+submit successfully
+  <span>Given</span> a user is on the
+  signup page 
+  <span>When</span> user enters complete
+  form data 
+  And user submits the form 
+  <span>Then</span> no error message
+  is displayed
+          </pre></code>
+          
+          <div class="notes">
+            TODO: Notes about BDD.
+            
+            Here I'll walk through running ScalaTest example.
+          </div>
+      </section>
+      <section class="step text" data-x="0" data-y="4800">
+        Miscellaneous Tips!
+      </section>
+      <section class="step text" data-x="1200" data-y="4800">
+        Don't test copy!
+        
+        <div class="notes">
+          Testing copy is even more brittle than testing document paths. TODO: Write more here.
+        </div>
+      </section>
+      <section class="step text" data-x="2400" data-y="4800">
+        Use WebDriver waits!
+      </section>
+      <section class="step text" data-x="3600" data-y="4800">
+        Favor CSS selectors.
+      </section>
+      <section class="step overview" data-x="0" data-y="6000">
+        <em>Questions?</em>
       </section>
     </div>
     <script type="text/javascript" src="js/impress.js"></script>

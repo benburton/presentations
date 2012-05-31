@@ -134,8 +134,17 @@ code.bdd span {
 }
 
 .overview {
-  padding-top: 400px;
   font-size: 300px;
+}
+
+.overview small {
+  font-size: 150px;
+  padding-top: 60px;
+  display: block;
+}
+
+.overview img {
+  width: 350px;
 }
 
 .webdriver-wait {

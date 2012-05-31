@@ -16,7 +16,7 @@
         <a href="http://bit.ly/webdriver-best-practices">http://bit.ly/webdriver-best-practices</a>
       </section>
       
-      <section class="step text">
+      <section class="step text notes">
         What is WebDriver?
       
         <div class="notes">
@@ -125,12 +125,27 @@
         </div>
       </section>
       
-      <section class="step text" data-x="0" data-y="3600">
-        Show me an <em>example!</em>
-        
-        <div class="notes">
-          Shift focus to walking through the code of Foosebook demo test (found <a href="https://github.com/benburton/presentations/tree/master/webdriver-best-practices/src/java/pageobject-example">here</a>).
-        </div>
+      <section class="step java-test" data-x="0" data-y="3600">
+              <code><pre>
+public void testSuccessfulSubmission() {
+
+    driver.get(URL);
+
+    sendText("input[name=first-name]", "Ben");
+    sendText("input[name=last-name]", "Burton");
+    sendText("input[name=email]", "bburton@theladders.com");
+    sendText("input[name=email-confirm]",
+        "bburton@theladders.com");
+    sendText("input[type=password]", "test123");
+
+    driver.findElement(By.cssSelector("input[type=submit]"))
+      .click();
+
+    assertFalse(
+      driver.findElement(By.cssSelector("#error-message"))
+        .isDisplayed()
+    );
+}</pre></code>
       </section>
       
       <section class="step" data-x="1200" data-y="3600">
@@ -152,11 +167,21 @@
         </div>
       </section>
       
-      <section class="step" data-x="2400" data-y="3600">
-          Behavior Driven Design
+      
+      <section class="step text" data-x="2400" data-y="3600">
+        Show me an <em>example!</em>
+        
+        <div class="notes">
+          Shift focus to walking through the code of Foosebook demo test (found <a href="https://github.com/benburton/presentations/tree/master/webdriver-best-practices/src/java/pageobject-example">here</a>).
+        </div>
       </section>
       
-      <section class="step" data-x="3600" data-y="3600">
+      
+      <section class="step text" data-x="3600" data-y="3600">
+          <em>Behavior Driven Design</em>
+      </section>
+      
+      <section class="step" data-x="4800" data-y="3600">
           <code class="bdd"><pre>
 <span>Feature:</span> Foosbook Signup
 <span>Scenario:</span> A complete signup should

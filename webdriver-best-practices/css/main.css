@@ -152,6 +152,13 @@ a {
   font-size: 90px;
 }
 
+.java-test code {
+  font-size: 25px;
+  line-height: 25px;
+  text-align: left;
+  padding-left: 20px;
+}
+
 .overview img {
   width: 350px;
 }

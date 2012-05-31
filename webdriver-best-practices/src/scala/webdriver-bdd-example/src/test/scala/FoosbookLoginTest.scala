@@ -46,7 +46,7 @@ class FoosbookLoginTest extends FeatureSpec with GivenWhenThen with BeforeAndAft
       )
 
       and("user submits the form")
-      signupPage.submit
+      //signupPage.submit
 
       then("error message is displayed")
       assert(signupPage.getErrorMessage != None)

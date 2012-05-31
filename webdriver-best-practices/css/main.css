@@ -37,7 +37,11 @@ h1 {
 }
 
 h1.talk-title {
-  padding: 45px 0;
+  padding: 10px 0;
+}
+
+.intro a {
+  font-size: 80px;
 }
 
 section.text {
@@ -141,6 +145,11 @@ code.bdd span {
   font-size: 150px;
   padding-top: 60px;
   display: block;
+}
+
+a {
+  color: #C5C6D1;
+  font-size: 90px;
 }
 
 .overview img {

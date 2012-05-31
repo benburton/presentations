@@ -97,11 +97,13 @@ code.fail {
   position: absolute;
 }
 
-.img-wrapper li.bad {
+.img-wrapper li.bad,
+code.bad {
   color: #ff8686;
 }
 
-.img-wrapper li.good {
+.img-wrapper li.good,
+code.good {
   color: #86ea86;
 }
 
@@ -134,4 +136,15 @@ code.bdd span {
 .overview {
   padding-top: 400px;
   font-size: 300px;
+}
+
+.webdriver-wait {
+  font-size: 100px;
+}
+
+.webdriver-wait code {
+  font-size: 30px;
+  line-height: 30px;
+  text-align: left;
+  padding-left: 10px;
 }

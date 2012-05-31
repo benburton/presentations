@@ -75,6 +75,18 @@
         </div>
       </section>
       
+      <section class="step" data-x="3600" data-y="1200">
+         <em>Pitfall:</em> Avoid Tiered Testing!
+         <div class="img-wrapper"><img src="images/tiers.gif" /></div>
+
+         <div class="notes">
+           We've tried extensively to take a tiered approach to functional testing. We created various levels of reliability of tests, and we had different
+           rules about release policies if tests at different tiers were passing. While this sounds like a good idea in theory, in practice it really 
+           results in tests that don't really end up passing that nobody takes into consideration because they're of lower priority. The moral of the story
+           is that if you have functional tests, you should try to make sure that they pass.
+         </div>
+       </section>
+      
       <section class="step text" data-x="0" data-y="2400">
         These sound <em>AWFUL!</em>
         
@@ -174,8 +186,25 @@ submit successfully
           Testing copy is even more brittle than testing document paths. TODO: Write more here.
         </div>
       </section>
-      <section class="step text" data-x="2400" data-y="4800">
+      <section class="step webdriver-wait" data-x="2400" data-y="4800">
         Use WebDriver waits!
+        <code class="bad"><pre>
+Thread.sleep(10000);
+        </pre></code>
+        <code class="good"><pre>
+WebElement myDynamicElement =
+  (new WebDriverWait(driver, 10))
+    .until(new ExpectedCondition<WebElement>() {
+      @Override
+      public WebElement apply(WebDriver d) {
+        return d.findElement(By.id("myDynamicElement"));
+      }
+    });
+        </pre></code>
+        <code class="good"><pre>
+driver.manage().timeouts().
+  implicitlyWait(10, TimeUnit.SECONDS);
+        </pre></code>
       </section>
       <section class="step text" data-x="3600" data-y="4800">
         Favor CSS selectors.

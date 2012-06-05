@@ -11,7 +11,7 @@
 }
 
 body {
-  background: #000;
+  background: url("http://cdn.theladders.net/static/images/components/shell/blue-stripes.png");
   color: #FFF;
   font-size: 70px;
   font-family: Lobster;
@@ -48,6 +48,14 @@ em {
   font-size: 300px;
   font-style: normal;
   display: block;
+}
+
+.lesson {
+  font-size: 90px;
+}
+
+.lesson:before {
+  content: 'Lesson: ';
 }
 
 .hackathon {
@@ -104,7 +112,7 @@ em {
 
 .stack ul {
   -webkit-border-radius: 30px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
-          border-radius: 30px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+      border-radius: 30px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
   margin: 0 20px;
   padding: 40px;
   float: left;
@@ -127,128 +135,129 @@ ul.backend li {
   width: 300px;
 }
 
+
 /** http://cssdeck.com/item/378/iphone-text-message-screen **/
 
 .container {
-    width: 1000px;
-    margin: 0 auto;
-    color: #000;
+  width: 1000px;
+  margin: 0 auto;
+  color: #000;
 }
 
 .white-shadow {
-    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
-    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
-    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
-    background-image: -o-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
-    background-image: -linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
-    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, .8)) 12px, to(rgba(255, 255, 255, .28)) 24px);
-    padding: 6px 24px 12px;
-    margin: 0;
-    border-radius: 72px;
+  background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+  background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+  background-image: -linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, .8)) 12px, to(rgba(255, 255, 255, .28)) 24px);
+  padding: 6px 24px 12px;
+  margin: 0;
+  border-radius: 72px;
 }
 
 .text-left {
-    background-color: #d2d2d2;
-    background-image: -webkit-linear-gradient(top, #9da0a6, #d2d2d2 51px, #e5e5e5 92%);
-    border-radius: 45px;
-    box-shadow: 6px 3px 6px rgba(0, 0, 0, 0.6);
-    font: 45px Helvetica, Arial, sans-serif;
-    margin: 1em 51% 1em 0;
-    padding: 0 12px;
-    position: relative;
-    border-width: 3px;
-    border-color: #9DA0A6 #9DA0A6 #9DA0A6 transparent;
-    border-style: solid;
+  background-color: #d2d2d2;
+  background-image: -webkit-linear-gradient(top, #9da0a6, #d2d2d2 51px, #e5e5e5 92%);
+  border-radius: 45px;
+  box-shadow: 6px 3px 6px rgba(0, 0, 0, 0.6);
+  font: 45px Helvetica, Arial, sans-serif;
+  margin: 1em 51% 1em 0;
+  padding: 0 12px;
+  position: relative;
+  border-width: 3px;
+  border-color: #9DA0A6 #9DA0A6 #9DA0A6 transparent;
+  border-style: solid;
 }
 
 .text-right {
-    background-color: #a9e24c;
-    background-image: -webkit-linear-gradient(top, #309b19, #a9e24c 51px, #9bcc45 92%);
-    border-radius: 45px;
-    box-shadow: -6px 3px 6px rgba(0, 0, 0, 0.6);
-    font: 45px Helvetica, Arial, sans-serif;
-    margin: 1em 0 1em 51%;
-    padding: 0 12px;
-    position: relative;
-    border-width: 3px;
-    border-color: #309b19 transparent #309b19 #309b19;
-    border-style: solid;
+  background-color: #a9e24c;
+  background-image: -webkit-linear-gradient(top, #309b19, #a9e24c 51px, #9bcc45 92%);
+  border-radius: 45px;
+  box-shadow: -6px 3px 6px rgba(0, 0, 0, 0.6);
+  font: 45px Helvetica, Arial, sans-serif;
+  margin: 1em 0 1em 51%;
+  padding: 0 12px;
+  position: relative;
+  border-width: 3px;
+  border-color: #309b19 transparent #309b19 #309b19;
+  border-style: solid;
 }
 
 .text-left:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: -3px;
-    height: 18px;
-    border-right: 42px solid #d5d5d5;
-    background: #dbe2ed;
-    -webkit-border-bottom-right-radius: 108px 54px;
-    -moz-border-radius-bottomright:108px 54px;
-    border-bottom-right-radius: 108px 54px;
-    box-shadow: 6px 6px 6px #9da0a6;
-    -webkit-transform: translate(0, -6px);
-    -moz-transform: translate(0, -6px);
-    -ms-transform: translate(0, -6px);
-    -o-transform: translate(0, -6px);
-    transform: translate(0, -6px);
-    right: 98%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -3px;
+  height: 18px;
+  border-right: 42px solid #d5d5d5;
+  background: #dbe2ed;
+  -webkit-border-bottom-right-radius: 108px 54px;
+  -moz-border-radius-bottomright:108px 54px;
+  border-bottom-right-radius: 108px 54px;
+  box-shadow: 6px 6px 6px #9da0a6;
+  -webkit-transform: translate(0, -6px);
+  -moz-transform: translate(0, -6px);
+  -ms-transform: translate(0, -6px);
+  -o-transform: translate(0, -6px);
+  transform: translate(0, -6px);
+  right: 98%;
 }
 
 .text-left:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0px;
-    right: 95.5%;
-    width: 84px;
-    height: 36px;
-    background: #dbe2ed;
-    -webkit-border-bottom-right-radius: 54px 36px;
-    -moz-border-radius-bottomright: 54px 36px;
-    border-bottom-right-radius: 60px 60px;
-    -webkit-transform: translate(-36px, -6px);
-    -moz-transform: translate(-36px, -6px);
-    -ms-transform: translate(-36px, -6px);
-    -o-transform: translate(-36px, -6px);
-    transform: translate(-36px, -6px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  right: 95.5%;
+  width: 84px;
+  height: 36px;
+  background: #dbe2ed;
+  -webkit-border-bottom-right-radius: 54px 36px;
+  -moz-border-radius-bottomright: 54px 36px;
+  border-bottom-right-radius: 60px 60px;
+  -webkit-transform: translate(-36px, -6px);
+  -moz-transform: translate(-36px, -6px);
+  -ms-transform: translate(-36px, -6px);
+  -o-transform: translate(-36px, -6px);
+  transform: translate(-36px, -6px);
 }
 
 .text-right:before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: -3px;
-    height: 42px;
-    border-left: 42px solid #a9e24c;
-    background: #dbe2ed;
-    -webkit-border-bottom-left-radius: 108px 54px;
-    -moz-border-radius-bottomleft: 108px 54px;
-    border-bottom-left-radius: 108px 54px;
-    box-shadow: 6px 6px 6px #9da0a6;
-    -webkit-transform: translate(0, -6px);
-    -moz-transform: translate(0, -6px);
-    -ms-transform: translate(0, -6px);
-    -o-transform: translate(0, -6px);
-    transform: translate(0, -6px);
-    left: 98%;
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: -3px;
+  height: 42px;
+  border-left: 42px solid #a9e24c;
+  background: #dbe2ed;
+  -webkit-border-bottom-left-radius: 108px 54px;
+  -moz-border-radius-bottomleft: 108px 54px;
+  border-bottom-left-radius: 108px 54px;
+  box-shadow: 6px 6px 6px #9da0a6;
+  -webkit-transform: translate(0, -6px);
+  -moz-transform: translate(0, -6px);
+  -ms-transform: translate(0, -6px);
+  -o-transform: translate(0, -6px);
+  transform: translate(0, -6px);
+  left: 98%;
 }
 
 .text-right:after {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    bottom: 0px;
-    left: 103.5%;
-    width: 84px;
-    height: 36px;
-    background: #dbe2ed;
-    -webkit-border-bottom-left-radius: 60px 36px;
-    -moz-border-radius-bottomleft: 60px 36px;
-    border-bottom-left-radius: 60px 60px;
-    -webkit-transform: translate(-36px, -6px);
-    -moz-transform: translate(-36px, -6px);
-    -ms-transform: translate(-36px, -6px);
-    -o-transform: translate(-36px, -6px);
-    transform: translate(-36px, -6px);
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0px;
+  left: 103.5%;
+  width: 84px;
+  height: 36px;
+  background: #dbe2ed;
+  -webkit-border-bottom-left-radius: 60px 36px;
+  -moz-border-radius-bottomleft: 60px 36px;
+  border-bottom-left-radius: 60px 60px;
+  -webkit-transform: translate(-36px, -6px);
+  -moz-transform: translate(-36px, -6px);
+  -ms-transform: translate(-36px, -6px);
+  -o-transform: translate(-36px, -6px);
+  transform: translate(-36px, -6px);
 }

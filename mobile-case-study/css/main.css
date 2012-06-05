@@ -17,6 +17,10 @@ body {
   font-family: Lobster;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .step {
   text-align: center;
   width: 1024px;
@@ -94,13 +98,41 @@ em {
   bottom: 50px;
 }
 
+.frontend img {
+  width: 170px;
+}
+
+.stack ul {
+  -webkit-border-radius: 30px; /* Saf3-4, iOS 1-3.2, Android ≤1.6 */
+          border-radius: 30px; /* Opera 10.5, IE9, Saf5, Chrome, FF4+, iOS 4, Android 2.1+ */
+  margin: 0 20px;
+  padding: 40px;
+  float: left;
+  width: 390px;
+  height: 550px;
+  text-align: center;
+  background-color: #777;
+}
+
+.stack h2 {
+  margin: 0;
+}
+
+.stack li {
+  float: left;
+  padding: 10px;
+}
+
+ul.backend li {
+  width: 300px;
+}
 
 /** http://cssdeck.com/item/378/iphone-text-message-screen **/
 
 .container {
-    color: #000;
     width: 1000px;
     margin: 0 auto;
+    color: #000;
 }
 
 .white-shadow {

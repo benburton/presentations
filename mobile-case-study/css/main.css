@@ -1,0 +1,222 @@
+/* Color pallatte: http://www.colourlovers.com/palette/373610/mellon_ball_surprise */
+
+@font-face {
+  font-family: BebasNeue;
+  src: url('../fonts/BebasNeue/BebasNeue.otf');
+}
+
+@font-face {
+  font-family: Lobster;
+  src: url('../fonts/Lobster/Lobster1.4.otf');
+}
+
+body {
+  background: #000;
+  color: #FFF;
+  font-size: 70px;
+  font-family: Lobster;
+}
+
+.step {
+  text-align: center;
+  width: 1024px;
+}
+
+h2 {
+  font-family: BebasNeue;
+  font-weight: normal;
+  margin: 20px 0;
+}
+
+h2.sub {
+  color: #FFF;
+  font-family: Lobster;
+  font-size: 80px;
+}
+
+.title-slide img {
+  text-align: center;
+  height: 150px;
+}
+
+em {
+  font-family: BebasNeue;
+  font-size: 300px;
+  font-style: normal;
+  display: block;
+}
+
+.hackathon {
+  background: url("../images/hackathon.png");
+  background-size: 1024px 600px;
+  background-repeat: no-repeat;
+  background-position: 0 50px;
+  width: 1024px;
+  height: 768px;
+  color: red;
+  padding-top: 30px;
+}
+
+.top,
+.bottom {
+  padding: 20px;
+}
+
+.top {
+  display: block;
+  text-align: left;
+}
+
+.bottom {
+  display: block;
+  text-align: right;
+}
+
+.mocks {
+  width: 1024px;
+  height: 678px;
+  text-align: left;
+  position: relative;
+}
+
+.mocks img {
+  position: absolute;
+}
+
+.mocks img.phone {
+  width: 300px;
+  right: 0;
+  top: 120px;
+}
+
+.mocks img.features {
+  left: 0;
+  bottom: 50px;
+}
+
+
+/** http://cssdeck.com/item/378/iphone-text-message-screen **/
+
+.container {
+    color: #000;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.white-shadow {
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+    background-image: -linear-gradient(top, rgba(255, 255, 255, .8) 12px, rgba(255, 255, 255, .28) 24px);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, .8)) 12px, to(rgba(255, 255, 255, .28)) 24px);
+    padding: 6px 24px 12px;
+    margin: 0;
+    border-radius: 72px;
+}
+
+.text-left {
+    background-color: #d2d2d2;
+    background-image: -webkit-linear-gradient(top, #9da0a6, #d2d2d2 51px, #e5e5e5 92%);
+    border-radius: 45px;
+    box-shadow: 6px 3px 6px rgba(0, 0, 0, 0.6);
+    font: 45px Helvetica, Arial, sans-serif;
+    margin: 1em 51% 1em 0;
+    padding: 0 12px;
+    position: relative;
+    border-width: 3px;
+    border-color: #9DA0A6 #9DA0A6 #9DA0A6 transparent;
+    border-style: solid;
+}
+
+.text-right {
+    background-color: #a9e24c;
+    background-image: -webkit-linear-gradient(top, #309b19, #a9e24c 51px, #9bcc45 92%);
+    border-radius: 45px;
+    box-shadow: -6px 3px 6px rgba(0, 0, 0, 0.6);
+    font: 45px Helvetica, Arial, sans-serif;
+    margin: 1em 0 1em 51%;
+    padding: 0 12px;
+    position: relative;
+    border-width: 3px;
+    border-color: #309b19 transparent #309b19 #309b19;
+    border-style: solid;
+}
+
+.text-left:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -3px;
+    height: 18px;
+    border-right: 42px solid #d5d5d5;
+    background: #dbe2ed;
+    -webkit-border-bottom-right-radius: 108px 54px;
+    -moz-border-radius-bottomright:108px 54px;
+    border-bottom-right-radius: 108px 54px;
+    box-shadow: 6px 6px 6px #9da0a6;
+    -webkit-transform: translate(0, -6px);
+    -moz-transform: translate(0, -6px);
+    -ms-transform: translate(0, -6px);
+    -o-transform: translate(0, -6px);
+    transform: translate(0, -6px);
+    right: 98%;
+}
+
+.text-left:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    right: 95.5%;
+    width: 84px;
+    height: 36px;
+    background: #dbe2ed;
+    -webkit-border-bottom-right-radius: 54px 36px;
+    -moz-border-radius-bottomright: 54px 36px;
+    border-bottom-right-radius: 60px 60px;
+    -webkit-transform: translate(-36px, -6px);
+    -moz-transform: translate(-36px, -6px);
+    -ms-transform: translate(-36px, -6px);
+    -o-transform: translate(-36px, -6px);
+    transform: translate(-36px, -6px);
+}
+
+.text-right:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -3px;
+    height: 42px;
+    border-left: 42px solid #a9e24c;
+    background: #dbe2ed;
+    -webkit-border-bottom-left-radius: 108px 54px;
+    -moz-border-radius-bottomleft: 108px 54px;
+    border-bottom-left-radius: 108px 54px;
+    box-shadow: 6px 6px 6px #9da0a6;
+    -webkit-transform: translate(0, -6px);
+    -moz-transform: translate(0, -6px);
+    -ms-transform: translate(0, -6px);
+    -o-transform: translate(0, -6px);
+    transform: translate(0, -6px);
+    left: 98%;
+}
+
+.text-right:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+    left: 103.5%;
+    width: 84px;
+    height: 36px;
+    background: #dbe2ed;
+    -webkit-border-bottom-left-radius: 60px 36px;
+    -moz-border-radius-bottomleft: 60px 36px;
+    border-bottom-left-radius: 60px 60px;
+    -webkit-transform: translate(-36px, -6px);
+    -moz-transform: translate(-36px, -6px);
+    -ms-transform: translate(-36px, -6px);
+    -o-transform: translate(-36px, -6px);
+    transform: translate(-36px, -6px);
+}

@@ -159,6 +159,48 @@ ul.backend li {
   width: 320px;
 }
 
+.apns {
+  position: relative;
+}
+
+.apns img {
+  position: absolute;
+}
+
+.apns img.one {
+  top: -300px;
+  left: 0;
+}
+
+.apns img.two {
+  top: -300px;
+  right: 0;
+}
+
+.apns img.three {
+  bottom: -200px;
+  left: 100px;
+}
+
+.simulator img {
+  display: block;
+  margin-left: 260px;
+}
+
+.recruitable img {
+  display: block;
+  margin-left: 100px;
+  padding-bottom: 100px;
+  width: 800px;
+}
+
+.airship img {
+  margin-left: 200px;
+  padding: 50px 0;
+  display: block;
+  width: 600px;
+}
+
 
 /** http://cssdeck.com/item/378/iphone-text-message-screen **/
 

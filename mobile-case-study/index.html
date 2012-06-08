@@ -14,7 +14,7 @@
       <section class="step title-slide">
         <h2>Introducing a Mobile Application to Your Existing Organization</h2>
         <h2 class="sub">A Case Study from</h2>
-        <img src="http://www.theladders.com/static/images/guestSite/home/logo.png" />
+        <img src="images/logo.png" />
       </section>
 
       <section class="step theladders">
@@ -22,9 +22,9 @@
       </section>
 
       <section class="step hackathon">
-        <span class="top">Our mobile project started with a</span>
-        <em>Hackathon</em>
-        <span class="bottom">over the holidays</span>
+        <span>Our mobile project started with a</span>
+        <img src="images/hackathon.png" />
+        <span><em>Hackathon</em> over the holidays</span>
       </section>
       
       <section class="step mocks">
@@ -94,7 +94,9 @@
       </section>
       
       <section class="step">
-        Native solutions are superior for end products.
+        Native solutions are
+        <em>superior</em>
+        for end products.
       </section>
       
       <section class="step responsive">
@@ -209,7 +211,7 @@
           videoId: '3D1t2_rdAXA',
           events: {
             'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
+            'onStateChange': function() {}
           }
         });
       }
@@ -219,12 +221,7 @@
       }
 
       var done = false;
-      function onPlayerStateChange(event) {
-        if (event.data == YT.PlayerState.PLAYING && !done) {
-          setTimeout(stopVideo, 6000);
-          done = true;
-        }
-      }
+
       function stopVideo() {
         player.stopVideo();
       }

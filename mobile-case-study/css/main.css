@@ -51,6 +51,10 @@ em {
   display: block;
 }
 
+.theladders em {
+  font-size: 200px;
+}
+
 .lesson {
   font-size: 90px;
 }
@@ -159,7 +163,7 @@ ul.backend li {
   width: 320px;
 }
 
-.responsive span {
+section span {
   display: block;
   padding-bottom: 80px;
 }
@@ -216,6 +220,18 @@ ul.backend li {
   padding: 50px 0;
   display: block;
   width: 600px;
+}
+
+.accepted img {
+  width: 500px;
+}
+
+img.ere {
+  width: 100%;
+}
+
+em.questions {
+  font-size: 280px;
 }
 
 

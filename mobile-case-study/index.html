@@ -93,78 +93,89 @@
         Native solutions are superior for end products.
       </section>
       
-      <section class="step" data-x="24000">
+      <section class="step responsive" data-x="24000">
+        <span>Aside: Responsive Design!</span>
+        <img src="images/responsive-design/browser.png" class="browser" />
+        <img src="images/responsive-design/ipad.png" class="ipad" />
+        <img src="images/responsive-design/ipod.png" class="ipod" />
+      </section>
+      
+      <section class="step" data-x="26000">
         Let's talk about
         <em>Apple</em>
       </section>
 
-      <section class="step" data-x="26000">
+      <section class="step" data-x="28000">
         You'll spend a lot of time working out
         <em>push</em>
         notifications for your application
       </section>
       
-      <section class="step apns" data-x="28000">
+      <section class="step apns" data-x="30000">
           <img src="images/apns/registration_sequence.jpeg" class="one" />
           <img src="images/apns/remote_notif_multiple.jpeg" class="two" />
           <img src="images/apns/remote_notif_simple.jpeg" class="three" />
       </section>
       
-      <section class="step simulator" data-x="30000">
+      <section class="step simulator" data-x="32000">
           Unfortunately, you can't test push
           <img src="images/apns/ios-simulator.png" />
           with the iOS simulator.
       </section>
       
-      <section class="step airship" data-x="32000">
+      <section class="step airship" data-x="34000">
         Lesson: Consider using a third party
         <img src="images/urban-airship.png" />
         to help you with push.
       </section>
       
-      <section class="step" data-x="34000">
+      <section class="step" data-x="36000">
           We were finally ready to
           <em>release</em>
           after two months of work!
       </section>
       
-      <section class="step" data-x="36000">
+      <section class="step video" data-x="38000">
+        <div id="player"></div>
+      </section>
+      
+      <section class="step" data-x="40000">
           <img src="images/submitted.png" />
       </section>
       
-      <section class="step" data-x="38000">
+      <section class="step" data-x="42000">
         Lesson: Your first submission is going to be
         <em>rejected</em>
         from Apple's App Store.
       </section>
       
-      <section class="step" data-x="40000">
+      <section class="step" data-x="44000">
           Build in time to 
           <em>respond</em>
           to Apple's feedback.
       </section>
       
-      <section class="step" data-x="42000">
+      <section class="step" data-x="46000">
           Lesson: (from our experience) It usually takes Apple about 2 weeks to review and provide feedback about your application.
       </section>
       
-      <section class="step" data-x="44000">
+      <section class="step" data-x="48000">
           <img src="images/accepted.png" />
       </section>
       
-      <section class="step" data-x="46000">
+      <section class="step" data-x="50000">
           <img src="images/downloads.png" />
       </section>
       
-      <section class="step" data-x="48000">
+      <section class="step" data-x="52000">
           Lesson: Remember to promote your application!
       </section>
       
-      <section class="step" data-x="50000">
+      <section class="step" data-x="54000">
           <em>ERE Picture</em>
       </section>
       
-      <section class="step" data-x="52000">
+      <section class="step" data-x="56000">
           <em style="margin: 0 -80px;">Questions?</em>
           <span style="font-size: 100px">(we're hiring!)</span>
       </section>
@@ -172,5 +183,49 @@
     </div>
     <script type="text/javascript" src="js/impress.js"></script>
     <script>impress().init();</script>
+    <script>
+          // 2. This code loads the IFrame Player API code asynchronously.
+          var tag = document.createElement('script');
+          tag.src = "http://www.youtube.com/player_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+          var playerInstance;
+          // 3. This function creates an <iframe> (and YouTube player)
+          //    after the API code downloads.
+          var player;
+          function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+              height: '600',
+              width: '380',
+              videoId: '3D1t2_rdAXA',
+              events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+              }
+            });
+          }
+
+          function onPlayerReady(event) {
+            playerInstance = event.target;
+          }
+
+          var done = false;
+          function onPlayerStateChange(event) {
+            if (event.data == YT.PlayerState.PLAYING && !done) {
+              setTimeout(stopVideo, 6000);
+              done = true;
+            }
+          }
+          function stopVideo() {
+            player.stopVideo();
+          }
+          
+          addEventListener("impress:stepenter", function(event) {
+            if (event.target.className.indexOf("video") > 0) {
+              playerInstance.seekTo(0);
+              playerInstance.playVideo();
+            }
+          }, false);
+    </script>
   </body>
 </html>

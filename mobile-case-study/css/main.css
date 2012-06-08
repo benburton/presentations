@@ -159,6 +159,23 @@ ul.backend li {
   width: 320px;
 }
 
+.responsive span {
+  display: block;
+  padding-bottom: 80px;
+}
+
+.responsive .browser {
+  width: 550px;
+}
+
+.responsive .ipad {
+  width: 300px;
+}
+
+.responsive .ipod {
+  width: 100px;
+}
+
 .apns {
   position: relative;
 }
